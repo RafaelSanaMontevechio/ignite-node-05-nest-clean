@@ -30,6 +30,6 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-    "email": "rafael@gmail.com",
-    "password": "123456"
+    "title": "New question",
+    "content": "The question content"
 }
