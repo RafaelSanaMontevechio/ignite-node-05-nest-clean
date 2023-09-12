@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 
-import { DatabaseModule } from '../database/database.module';
-
 import { CreateQuestionUseCase } from '@/domain/forum/application/use-cases/create-question';
 import { RegisterStudentUseCase } from '@/domain/forum/application/use-cases/register-student';
 import { AuthenticateStudentUseCase } from '@/domain/forum/application/use-cases/authenticate-student';
 import { FetchRecentQuestionsUseCase } from '@/domain/forum/application/use-cases/fetch-recent-questions';
 
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { DatabaseModule } from '../database/database.module';
 import { CryptographyModule } from '../cryptography/cryptography.module';
 
 import { AuthenticateController } from './controllers/authenticate.controller';

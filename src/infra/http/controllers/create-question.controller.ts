@@ -1,6 +1,11 @@
-import { BadRequestException, UseGuards } from '@nestjs/common';
+import {
+  BadRequestException,
+  UseGuards,
+  Body,
+  Controller,
+  Post,
+} from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
-import { Body, Controller, Post } from '@nestjs/common';
 
 import { z } from 'zod';
 
@@ -17,7 +22,7 @@ const createQuestionBodySchema = z.object({
 type CreateQuestionBodySchema = z.infer<typeof createQuestionBodySchema>;
 
 @Controller('/questions')
-@UseGuards(AuthGuard('jwt'))
+// @UseGuards(AuthGuard('jwt'))
 export class CreateQuestionController {
   constructor(private createQuestion: CreateQuestionUseCase) {}
 
