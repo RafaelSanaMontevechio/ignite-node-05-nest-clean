@@ -5,7 +5,6 @@ import { RegisterStudentUseCase } from '@/domain/forum/application/use-cases/reg
 import { AuthenticateStudentUseCase } from '@/domain/forum/application/use-cases/authenticate-student';
 import { FetchRecentQuestionsUseCase } from '@/domain/forum/application/use-cases/fetch-recent-questions';
 
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { DatabaseModule } from '../database/database.module';
 import { CryptographyModule } from '../cryptography/cryptography.module';
 
