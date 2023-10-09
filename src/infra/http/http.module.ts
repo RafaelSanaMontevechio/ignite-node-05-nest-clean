@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { EditQuestionUseCase } from '@/domain/forum/application/use-cases/edit-question';
 import { CreateQuestionUseCase } from '@/domain/forum/application/use-cases/create-question';
 import { DeleteQuestionUseCase } from '@/domain/forum/application/use-cases/delete-question';
+import { AnswerQuestionUseCase } from '@/domain/forum/application/use-cases/answer-question';
 import { RegisterStudentUseCase } from '@/domain/forum/application/use-cases/register-student';
 import { GetQuestionBySlugUseCase } from '@/domain/forum/application/use-cases/get-question-by-slug';
 import { AuthenticateStudentUseCase } from '@/domain/forum/application/use-cases/authenticate-student';
@@ -15,6 +16,7 @@ import { AuthenticateController } from './controllers/authenticate.controller';
 import { EditQuestionController } from './controllers/edit-question.controller';
 import { CreateAccountController } from './controllers/create-account.controller';
 import { CreateQuestionController } from './controllers/create-question.controller';
+import { AnswerQuestionController } from './controllers/answer-question.controller';
 import { DeleteQuestionController } from './controllers/delete-question.controller';
 import { GetQuestionBySlugController } from './controllers/get-question-by-slug.controller';
 import { FetchRecentQuestionsController } from './controllers/fetch-recent-questions.controller';
@@ -29,6 +31,7 @@ import { FetchRecentQuestionsController } from './controllers/fetch-recent-quest
     GetQuestionBySlugController,
     EditQuestionController,
     DeleteQuestionController,
+    AnswerQuestionController,
   ],
   providers: [
     CreateQuestionUseCase,
@@ -38,6 +41,7 @@ import { FetchRecentQuestionsController } from './controllers/fetch-recent-quest
     GetQuestionBySlugUseCase,
     EditQuestionUseCase,
     DeleteQuestionUseCase,
+    AnswerQuestionUseCase,
   ],
 })
 export class HttpModule {}
