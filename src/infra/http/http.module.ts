@@ -12,6 +12,7 @@ import { CommentOnQuestionUseCase } from '@/domain/forum/application/use-cases/c
 import { GetQuestionBySlugUseCase } from '@/domain/forum/application/use-cases/get-question-by-slug';
 import { AuthenticateStudentUseCase } from '@/domain/forum/application/use-cases/authenticate-student';
 import { DeleteAnswerCommentUseCase } from '@/domain/forum/application/use-cases/delete-answer-comment';
+import { FetchAnswerCommentsUseCase } from '@/domain/forum/application/use-cases/fetch-answer-comments';
 import { FetchRecentQuestionsUseCase } from '@/domain/forum/application/use-cases/fetch-recent-questions';
 import { FetchQuestionAnswersUseCase } from '@/domain/forum/application/use-cases/fetch-question-answers';
 import { DeleteQuestionCommentUseCase } from '@/domain/forum/application/use-cases/delete-question-comment';
@@ -33,6 +34,7 @@ import { CommentOnAnswerController } from './controllers/comment-on-answer.contr
 import { CommentOnQuestionController } from './controllers/comment-on-question.controller';
 import { GetQuestionBySlugController } from './controllers/get-question-by-slug.controller';
 import { DeleteAnswerCommentController } from './controllers/delete-answer-comment.controller';
+import { FetchAnswerCommentsController } from './controllers/fetch-answer-comments.controller';
 import { FetchRecentQuestionsController } from './controllers/fetch-recent-questions.controller';
 import { FetchQuestionAnswersController } from './controllers/fetch-question-answers.controller';
 import { DeleteQuestionCommentController } from './controllers/delete-question-comment.controller';
@@ -42,42 +44,44 @@ import { ChooseQuestionBestAnswerController } from './controllers/choose-questio
 @Module({
   imports: [DatabaseModule, CryptographyModule],
   controllers: [
-    CreateAccountController,
-    AuthenticateController,
-    CreateQuestionController,
-    FetchRecentQuestionsController,
-    GetQuestionBySlugController,
-    EditQuestionController,
-    DeleteQuestionController,
-    AnswerQuestionController,
     EditAnswerController,
     DeleteAnswerController,
-    FetchQuestionAnswersController,
-    ChooseQuestionBestAnswerController,
-    CommentOnQuestionController,
-    DeleteQuestionCommentController,
+    EditQuestionController,
+    AuthenticateController,
+    CreateAccountController,
+    CreateQuestionController,
+    DeleteQuestionController,
+    AnswerQuestionController,
     CommentOnAnswerController,
+    CommentOnQuestionController,
+    GetQuestionBySlugController,
     DeleteAnswerCommentController,
+    FetchAnswerCommentsController,
+    FetchQuestionAnswersController,
+    FetchRecentQuestionsController,
     FetchQuestionCommentsController,
+    DeleteQuestionCommentController,
+    ChooseQuestionBestAnswerController,
   ],
   providers: [
-    CreateQuestionUseCase,
-    FetchRecentQuestionsUseCase,
-    RegisterStudentUseCase,
-    AuthenticateStudentUseCase,
-    GetQuestionBySlugUseCase,
-    EditQuestionUseCase,
-    DeleteQuestionUseCase,
-    AnswerQuestionUseCase,
     EditAnswerUseCase,
     DeleteAnswerUseCase,
-    FetchQuestionAnswersUseCase,
-    ChooseQuestionBestAnswerUseCase,
-    CommentOnQuestionUseCase,
-    DeleteQuestionCommentUseCase,
+    EditQuestionUseCase,
+    CreateQuestionUseCase,
+    AnswerQuestionUseCase,
+    DeleteQuestionUseCase,
     CommentOnAnswerUseCase,
+    RegisterStudentUseCase,
+    CommentOnQuestionUseCase,
+    GetQuestionBySlugUseCase,
+    AuthenticateStudentUseCase,
+    FetchAnswerCommentsUseCase,
     DeleteAnswerCommentUseCase,
+    FetchRecentQuestionsUseCase,
+    FetchQuestionAnswersUseCase,
+    DeleteQuestionCommentUseCase,
     FetchQuestionCommentsUseCase,
+    ChooseQuestionBestAnswerUseCase,
   ],
 })
 export class HttpModule {}
