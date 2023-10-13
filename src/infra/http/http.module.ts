@@ -31,6 +31,7 @@ import { CreateQuestionController } from './controllers/create-question.controll
 import { AnswerQuestionController } from './controllers/answer-question.controller';
 import { DeleteQuestionController } from './controllers/delete-question.controller';
 import { CommentOnAnswerController } from './controllers/comment-on-answer.controller';
+import { UploadAttachmentController } from './controllers/upload-attachment.controller';
 import { CommentOnQuestionController } from './controllers/comment-on-question.controller';
 import { GetQuestionBySlugController } from './controllers/get-question-by-slug.controller';
 import { DeleteAnswerCommentController } from './controllers/delete-answer-comment.controller';
@@ -53,6 +54,7 @@ import { ChooseQuestionBestAnswerController } from './controllers/choose-questio
     DeleteQuestionController,
     AnswerQuestionController,
     CommentOnAnswerController,
+    UploadAttachmentController,
     CommentOnQuestionController,
     GetQuestionBySlugController,
     DeleteAnswerCommentController,
