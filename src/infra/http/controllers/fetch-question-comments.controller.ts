@@ -12,10 +12,10 @@ import { z } from 'zod';
 
 import { ZodValidationPipe } from '@/infra/http/pipes/zod-validation.pipe';
 
-import { QuestionPresenter } from '@/infra/presenters/question-presenter';
-import { AnswerPresenter } from '@/infra/presenters/answer-presenter';
+import { QuestionPresenter } from '@/infra/http/presenters/question-presenter';
+import { AnswerPresenter } from '@/infra/http/presenters/answer-presenter';
 import { FetchQuestionCommentsUseCase } from '@/domain/forum/application/use-cases/fetch-question-comments';
-import { CommentPresenter } from '@/infra/presenters/comment-presenter';
+import { CommentPresenter } from '@/infra/http/presenters/comment-presenter';
 
 const pageQueryParamSchema = z
   .string()
