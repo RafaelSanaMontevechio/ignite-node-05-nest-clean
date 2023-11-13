@@ -1,4 +1,16 @@
-import 'dotenv/config';
+// import 'dotenv/config';
+import { config } from 'dotenv';
+
+//Overrides the variables
+config({
+  path: '.env',
+  override: true,
+});
+
+config({
+  path: '.env.test',
+  override: true,
+});
 
 import { PrismaClient } from '@prisma/client';
 import { randomUUID } from 'node:crypto';
